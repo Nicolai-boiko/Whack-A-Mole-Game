@@ -69,7 +69,7 @@ const holes = document.querySelectorAll('.hole');
 hiddenButton.addEventListener('click', getScore);
 
   
-/*difficultyButtons.forEach(difBtn => difBtn.addEventListener('click', function (e) {
+difficultyButtons.forEach(difBtn => difBtn.addEventListener('click', function (e) {
   let minTime = diff.elementId.min;
   let maxTime = diff.elementId.min;
   let elementId = e.target.getAttribute('id');
@@ -89,4 +89,4 @@ let diff = {
         min: 100,
         max: 700
     }
-};*/
+};
