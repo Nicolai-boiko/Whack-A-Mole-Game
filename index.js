@@ -6,7 +6,26 @@ const holes = document.querySelectorAll('.hole');
   let score = 0;
   let save = document.getElementById('save');
   let hiddenButton = document.getElementById('hiddenButton');
+  let difficultyButtons = document.querySelectorAll('.difBtn')
+  let difficulty = 'Easy';
+  let diff = {
+    Easy: {
+        min: 500,
+        max: 1500
+    },
+    Normal: {
+        min: 300,
+        max: 1000
+    },
+    Hard: {
+        min: 100,
+        max: 700
+    }
+};
 
+difficultyButtons.forEach(difBtn => difBtn.addEventListener('click', function (e) {
+  difficulty = e.target.id
+}));
 
   function randomTime(min, max) {
     return Math.round(Math.random() * (max - min) + min);
@@ -23,7 +42,8 @@ const holes = document.querySelectorAll('.hole');
   }
 
   function peep() {
-    const time = randomTime(200, 1000);
+    const {min, max} = diff[difficulty]
+    const time = randomTime(min, max);
     const hole = randomHole(holes);
     hole.classList.add('up');
     setTimeout(() => {
@@ -69,24 +89,6 @@ const holes = document.querySelectorAll('.hole');
 hiddenButton.addEventListener('click', getScore);
 
   
-difficultyButtons.forEach(difBtn => difBtn.addEventListener('click', function (e) {
-  let minTime = diff.elementId.min;
-  let maxTime = diff.elementId.min;
-  let elementId = e.target.getAttribute('id');
-}));
 
-let difficultyButtons = document.querySelectorAll('.difBtn')
-let diff = {
-    Easy: {
-        min: 500,
-        max: 1500
-    },
-    Normal: {
-        min: 300,
-        max: 1000
-    },
-    Hard: {
-        min: 100,
-        max: 700
-    }
-};
+
+
