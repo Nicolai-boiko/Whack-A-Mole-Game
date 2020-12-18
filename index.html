@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Whack A Mole!</title>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Whack-a-mole! <span class="score">0</span></h1>
+
+  <div class="controls">
+    <button class="pink difBtn button" id="Easy">Easy</button>
+    <button class="green difBtn button" id="Normal">Normal</button>
+    <button class="red difBtn button" id="Hard">Hard</button>
+  </div>  
+  <div class="controls">
+    <button onClick="startGame()" id="start" class="button">Start!</button>
+    <button id="save" class="button">Save</button>
+  </div>
+
+  <div class="game">
+    <div class="hole hole1">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole2">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole3">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole4">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole5">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole6">
+      <div class="mole"></div>
+    </div>
+  </div>
+  <div class="saveControls">
+    <button class="hiddenButton" id="hiddenButton">Press here to see your hightscore</button>
+    <h2 id="scoreName"></h2>
+  </div>
+
+<script src="./index.js"></script>
+</body>
+</html>
